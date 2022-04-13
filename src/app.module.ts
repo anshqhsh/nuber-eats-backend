@@ -8,7 +8,8 @@ import { RestaurantsModule } from './restaurants/restaurants.module';
   imports: [
     GraphQLModule.forRoot({
       driver: ApolloDriver,
-      autoSchemaFile: join(process.cwd(), 'src/schema.gql'),
+      // autoSchemaFile: join(process.cwd(), 'src/schema.gql'),  자동으로 typescript 파일을 생성해준다.
+      autoSchemaFile: true,
     }),
     RestaurantsModule,
   ],
